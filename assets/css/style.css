@@ -1,0 +1,193 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #777;
+}
+
+.flex {
+    display:flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header {
+    background-color: rgba(0,0,0, .6);
+    background-image: url("/assets/images/marvel-banner2.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 30px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255,255,255, .3);
+}
+
+.main nav li {
+    padding: 0 5%;
+}
+
+.nav a:hover{
+    background-color: rgba(255,255,255, .3);
+}
+
+
+.band-name {
+    text-align: center;
+    font-size: 4em;
+    color:white;
+    font-weight: normal;
+}
+
+.band-name-large {
+    font-size: 10vw;
+}
+
+.content-section {
+    margin: 1.5vw;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1vw;
+}
+
+.section-header{
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.5em;
+}
+
+
+.about-img {
+    height: 25vw;
+    width: 25vw;
+    margin:15px;
+    border-radius: 2.5px;
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color:white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-footer-container ul {
+    flex-grow:1;
+    text-align: end;
+    justify-content: space-between;
+}
+
+
+
+.footer-nav li {
+    padding: 0.5 em;
+}
+
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+    margin-left: 3vw;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin-right: 2vw;
+    color:white;
+    border: 2px solid #d82d2d;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left:2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255,255,255,.3);
+}
+
+.btn-play {
+    border-radius: 50%;
+    color: white;
+    padding:0;
+    width: 75px;
+    height: 75px;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child{
+    border-bottom: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.btn-primary {
+    color:white;
+    background-color: #56CCF2;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: #2D9CD8;
+}
