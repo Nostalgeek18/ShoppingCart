@@ -1,0 +1,27 @@
+{
+  "name": "shoppingcart",
+  "version": "1.0.0",
+  "description": "Shopping cart SSR using Node.JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nostalgeek18/ShoppingCart.git"
+  },
+  "author": "Nazim Mouzai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nostalgeek18/ShoppingCart/issues"
+  },
+  "homepage": "https://github.com/Nostalgeek18/ShoppingCart#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "stripe": "^8.204.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
+  }
+}
