@@ -1,3 +1,6 @@
+
+
+
 const removeButtons = document.querySelectorAll('.btn-danger');
 const priceCart     = document.querySelector('.cart-total-price');
 const quantityInput = document.querySelectorAll('.cart-quantity-input');
@@ -100,6 +103,8 @@ function updateCartTotal(){
 
 //*************VALIDATE PURCHASE *************/
 
+
+
 purchaseBtn.addEventListener('click', ()=> {
     alert('Thank you for your purchase !');
     let cartItems = document.querySelector('.cart-items');
@@ -108,4 +113,30 @@ purchaseBtn.addEventListener('click', ()=> {
        cartItems.removeChild(cartItems.firstChild)
    }
    updateCartTotal();
+  
+//STRIPE PAYMENT IN PROGRESS
+//     fetch('/create-checkout-session', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             items: [
+
+//             ]
+//         })
+
+//     }).then(res => {
+//         if (res.ok) return res.json()
+//         return res.json().then(json => Promise.reject(json))
+//     }).then(({url}) => {
+//         window.location = url
+//     })
+
+// let priceItem = document.getElementsByClassName('cart-total-price')[0];
+// let price = parseFloat(priceItem.innerText.replace('$',''))*100;
+
+// stripeHandler.open({
+//     amount:price
+// })
 })

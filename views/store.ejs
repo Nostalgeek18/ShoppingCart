@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./assets/css/style.css">
     <meta name="description" content="About section">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Shopping cart - Store</title>
+    <script>
+        var stripePublicKey = '<%= stripePublicKey %>'
+    </script>
 </head>
 <body>
     <header class="main-header">
@@ -27,23 +30,17 @@
     <section class="container content-section">
         <h2 class="section-header">MUSIC</h2>
         <div class="shop-items">
-            <div class="shop-item">
-                <div><span class="shop-item-title">ALBUM 1</span></div>
-                <img class="shop-item-image" src="./assets/images/products/Hat-Marvel.jpg" alt="Marvel-hat">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$12.99</span>
-                    <button class="btn btn-primary shop-item-btn" role="button">ADD TO CART</button>
+            <% items.music.forEach(function(item){ %>
+                <div class="shop-item" data-item-id="<%= item.id %>">
+                    <div><span class="shop-item-title"><%= item.name %></span></div>
+                    <img class="shop-item-image" src="./assets/images/<%= item.imgName %>" alt="<%= item.imgName %>">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$<%= item.price /100 %></span>
+                        <button class="btn btn-primary shop-item-btn" role="button">ADD TO CART</button>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="shop-item">
-                <div><span class="shop-item-title">ALBUM 2</span></div>
-                <img class="shop-item-image" src="./assets/images/products/Hat-Marvel.jpg" alt="Marvel-hat">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$12.99</span>
-                    <button class="btn btn-primary shop-item-btn" role="button">ADD TO CART</button>
-                </div>
-            </div>
+            <% }) %>
+
         </div>
        
     </section>
@@ -52,23 +49,17 @@
     <section class="container content-section">
         <h2 class="section-header">MERCH</h2>
         <div class="shop-items">
-            <div class="shop-item">
-                <div><span class="shop-item-title">MERCH 1</span></div>
-                <img class="shop-item-image" src="./assets/images/products/Hat-Marvel.jpg" alt="Marvel-hat">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$12.99</span>
-                    <button class="btn btn-primary shop-item-btn" role="button">ADD TO CART</button>
+             <% items.merch.forEach(function(item){ %>
+                <div class="shop-item" data-item-id="<%= item.id %>">
+                    <div><span class="shop-item-title"><%= item.name %></span></div>
+                    <img class="shop-item-image" src="./assets/images/merch/<%= item.imgName %>" alt="<%= item.imgName %>">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$<%= item.price /100 %></span>
+                        <button class="btn btn-primary shop-item-btn" role="button">ADD TO CART</button>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="shop-item">
-                <div><span class="shop-item-title">MERCH 2</span></div>
-                <img class="shop-item-image" src="./assets/images/products/Hat-Marvel.jpg" alt="Marvel-hat">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$12.99</span>
-                    <button class="btn btn-primary shop-item-btn" role="button">ADD TO CART</button>
-                </div>
-            </div>
+            <% }) %> 
+
         </div>
        
     </section>
