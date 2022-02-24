@@ -8,10 +8,10 @@ const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 const { Console } = require('console')
 const express = require('express')
 const app     = express()
-const fs      = require('fs') //Permet de lire les fichiers
+const fs      = require('fs') //Able to read files
 
 app.set('view engine', 'ejs')
-app.use(express.static('public')) //Indique l'emplacement des fichiers front-end
+app.use(express.static('public')) //Tell location of folders
 
 
 app.get('/store', function(req, res){
@@ -20,7 +20,7 @@ app.get('/store', function(req, res){
             res.status(500).end()
         }else {
             res.render('store.ejs', {
-                //Tableau JSON à envoyer au fichier sous le nom 'items'
+                //Sending JSON array with the name of 'items'
                 items: JSON.parse(data),
                 stripePublicKey: stripePublicKey
             });

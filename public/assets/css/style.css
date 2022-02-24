@@ -77,6 +77,12 @@
     padding: 0 1vw;
 }
 
+.about-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .section-header{
     text-align: center;
     font-weight: normal;
@@ -339,12 +345,38 @@
 }
 
 @media only screen and (max-width: 768px) {
-    /* For desktop: */
-    .nav-div-btn{
-       
+    .band-name {
+        font-size: 2em;
+    }
+
+    .btn-play {
+        /* margin-top:5%; */
+    }
+    
+    /**********************ABOUT**********************/
+    .section-header div {
+        flex-direction: column;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+
+    .about-img{
+        width: 50vw;
     }
 
     
+    /********HEADER**************/
 .main-header {
         background-color: rgba(0,0,0, .3);
         background-image: url("/assets/images/banner-mobile.jpg");
