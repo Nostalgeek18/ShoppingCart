@@ -1,6 +1,3 @@
-
-
-
 const removeButtons = document.querySelectorAll('.btn-danger');
 const priceCart     = document.querySelector('.cart-total-price');
 const quantityInput = document.querySelectorAll('.cart-quantity-input');
